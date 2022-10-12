@@ -1,4 +1,10 @@
+import { googleFonts } from './config/modules'
+
 export default defineNuxtConfig({
+  buildModules: [
+    '@nuxtjs/google-fonts'
+  ],
+  googleFonts,
   components: [
     { path: '~/components', pathPrefix: false }
   ],
