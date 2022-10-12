@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port 8000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -21,6 +21,7 @@
     "eslint-plugin-vue": "^9.6.0",
     "nuxt": "3.0.0-rc.11",
     "postcss-html": "^1.5.0",
+    "sass": "^1.55.0",
     "stylelint": "^14.13.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^28.0.0",
