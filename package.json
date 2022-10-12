@@ -6,6 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "lint": "yarn lint:eslint && yarn lint:style",
+    "lint:fix": "yarn lint:eslint:fix && yarn lint:style:fix",
     "lint:eslint": "eslint --ignore-pattern node_modules/ --ext .ts,.js,.vue .",
     "lint:eslint:fix": "yarn lint:eslint --fix",
     "lint:style": "stylelint '**/*.{vue,scss}'",
