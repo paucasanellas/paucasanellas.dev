@@ -2,13 +2,11 @@
 $font-family-body: sans-serif;
 $font-family-headings: "Poppins", sans-serif;
 $font-family-navbar: "Poppins", sans-serif;
-$font-family-navbar-brand: "Poppins", sans-serif;
 
 // Weights
 $font-weight-body: 300;
 $font-weight-headings: 700;
-$font-weight-navbar: 300;
-$font-weight-navbar-brand: 700;
+$font-weight-navbar: 400;
 
 // Sizes
 $font-size-h1: 3.5rem;
@@ -18,5 +16,4 @@ $font-size-h4: 1.5rem;
 $font-size-h5: 1rem;
 $font-size-h6: 0.85rem;
 $font-size-lead: $font-size-h4;
-$font-size-navbar: 0.95rem;
-$font-size-navbar-brand: 1rem;
+$font-size-navbar: 1rem;

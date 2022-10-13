@@ -1,0 +1,18 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512">
+    <title>Laptop</title>
+    <rect
+      x="48"
+      y="96"
+      width="416"
+      height="304"
+      rx="32.14"
+      ry="32.14"
+      fill="none"
+      stroke="currentColor"
+      stroke-linejoin="round"
+      stroke-width="32"
+    />
+    <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M16 416h480" />
+  </svg>
+</template>
