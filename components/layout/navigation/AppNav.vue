@@ -7,6 +7,11 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import AppNavMenu from '@/components/layout/navigation/AppNavMenu.vue'
+import AppNavToggle from '@/components/layout/navigation/AppNavToggle.vue'
+import AppNavActions from '@/components/layout/navigation/AppNavActions.vue'
+
 const isOpen = ref(false)
 
 const toggleMenu = () => {
