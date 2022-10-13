@@ -18,6 +18,9 @@
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'uses'}">
       <IconUses width="24" /> Uses
     </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'contact'}">
+      <IconMail width="24" /> Contact
+    </NuxtLink>
   </nav>
 </template>
 

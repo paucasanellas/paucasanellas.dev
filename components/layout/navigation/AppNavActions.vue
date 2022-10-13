@@ -7,9 +7,6 @@
       <IconMoon width="32" />
     </div>
     <div class="AppNavActions__action">
-      <IconMail width="32" />
-    </div>
-    <div class="AppNavActions__action">
       <IconGithub width="32" />
     </div>
   </div>
