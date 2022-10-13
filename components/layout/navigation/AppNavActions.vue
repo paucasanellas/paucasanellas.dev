@@ -7,7 +7,7 @@
       <Icon name="ion:moon-outline" size="32" />
     </div>
     <div class="AppNavActions__action">
-      <Icon name="ion:logo-github-outline" size="24" />
+      <Icon name="ion:logo-github-outline" size="32" />
     </div>
   </div>
 </template>
