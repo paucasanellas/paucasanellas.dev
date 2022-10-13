@@ -1,7 +1,9 @@
 <template>
   <div class="LayoutDefault">
-    <AppNav />
-    <slot />
+    <Container>
+      <AppNav />
+      <slot />
+    </Container>
   </div>
 </template>
 
@@ -11,8 +13,10 @@
 
 <style lang="scss">
 .LayoutDefault {
-  display: flex;
-  min-height: 100vh;
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
 
   main {
     flex-grow: 1;
