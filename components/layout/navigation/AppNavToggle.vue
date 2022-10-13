@@ -1,7 +1,7 @@
 <template>
   <button
-    class="ToggleComponent"
-    :class="open ? 'ToggleComponent--active' : ''"
+    class="AppNavToggle"
+    :class="open ? 'AppNavToggle--active' : ''"
     @click.prevent="$emit('toggle')"
   >
     <span />
@@ -20,7 +20,9 @@ defineProps({
 </script>
 
 <style lang="scss">
-.ToggleComponent {
+@import "@/assets/styles/settings/breakpoints";
+
+.AppNavToggle {
   display: flex;
   flex-direction: column;
   width: 4rem;
@@ -29,6 +31,10 @@ defineProps({
   background-color: transparent;
   gap: 0.56rem;
   cursor: pointer;
+  transform: translateX(-80px);
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1rem;
 
   > span {
     display: block;
@@ -52,6 +58,10 @@ defineProps({
     span:nth-child(3) {
       transform: rotate(45deg);
     }
+  }
+
+  @media (min-width: $breakpoint-laptop) {
+    display: none;
   }
 }
 </style>
