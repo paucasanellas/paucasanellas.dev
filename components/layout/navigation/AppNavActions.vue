@@ -1,19 +1,19 @@
 <template>
-  <div class="AppNavActions">
-    <div class="AppNavActions__action">
-      <Icon name="ion:search-outline" size="32" />
+  <div :class="AppNavActions.actions">
+    <div>
+      <AppIcon name="search-outline" size="32" />
     </div>
-    <div class="AppNavActions__action">
-      <Icon name="ion:moon-outline" size="32" />
+    <div>
+      <AppIcon name="moon-outline" size="32" />
     </div>
-    <div class="AppNavActions__action">
-      <Icon name="ion:logo-github-outline" size="32" />
+    <div>
+      <AppIcon name="logo-github-outline" size="32" />
     </div>
   </div>
 </template>
 
-<style lang="scss">
-.AppNavActions {
+<style lang="scss" module="AppNavActions">
+.actions {
   margin-top: auto;
   padding-top: 1rem;
   display: flex;

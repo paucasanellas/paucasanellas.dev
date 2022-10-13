@@ -1,9 +1,9 @@
 <template>
   <div class="LayoutDefault">
-    <Container>
+    <AppContainer>
       <AppNav />
       <slot />
-    </Container>
+    </AppContainer>
   </div>
 </template>
 

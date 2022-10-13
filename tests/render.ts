@@ -17,7 +17,7 @@ export function render (component, options?) {
       stubs: {
         ...options?.stubs || [],
         NuxtLink: NuxtLinkStub,
-        Icon: true
+        AppIcon: true
       }
     }
   })
