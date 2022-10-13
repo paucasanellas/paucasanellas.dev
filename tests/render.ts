@@ -17,16 +17,7 @@ export function render (component, options?) {
       stubs: {
         ...options?.stubs || [],
         NuxtLink: NuxtLinkStub,
-        IconHome: true,
-        IconAbout: true,
-        IconBlog: true,
-        IconPath: true,
-        IconTech: true,
-        IconUses: true,
-        IconMail: true,
-        IconSearch: true,
-        IconMoon: true,
-        IconGithub: true
+        Icon: true
       }
     }
   })
