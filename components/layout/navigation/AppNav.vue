@@ -27,6 +27,7 @@ const toggleMenu = () => {
   display: flex;
   flex-direction: column;
   font-family: $font-family-navbar;
+  z-index: 1;
 
   @media (max-width: $breakpoint-laptop) {
     position: fixed;

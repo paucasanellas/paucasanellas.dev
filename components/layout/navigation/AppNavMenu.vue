@@ -1,23 +1,23 @@
 <template>
   <nav class="AppNavMenu">
-    <a class="AppNavMenu__link">
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'index'}">
       <IconHome width="24" /> Home
-    </a>
-    <a class="AppNavMenu__link">
+    </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'about' }">
       <IconAbout width="24" /> About
-    </a>
-    <a class="AppNavMenu__link">
+    </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'blog' }">
       <IconBlog width="24" /> Blog
-    </a>
-    <a class="AppNavMenu__link">
+    </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'path' }">
       <IconPath width="24" /> Career Path
-    </a>
-    <a class="AppNavMenu__link">
+    </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'tech' }">
       <IconTech width="24" /> Tech Stack
-    </a>
-    <a class="AppNavMenu__link">
+    </NuxtLink>
+    <NuxtLink class="AppNavMenu__link" :to="{ name: 'uses'}">
       <IconUses width="24" /> Uses
-    </a>
+    </NuxtLink>
   </nav>
 </template>
 
