@@ -15,12 +15,10 @@
 .LayoutDefault {
   .container {
     display: flex;
-    min-height: 100vh;
   }
 
   main {
     flex-grow: 1;
-    padding: 2rem;
   }
 }
 </style>

@@ -32,6 +32,9 @@
       <div class="AppNav__action">
         <IconMail width="32" />
       </div>
+      <div class="AppNav__action">
+        <IconGithub width="32" />
+      </div>
     </div>
   </aside>
 </template>
@@ -52,7 +55,8 @@ const toggleMenu = () => {
   background-color: white;
   padding: 1rem;
   width: 250px;
-  box-shadow: 0 0 3px 0 rgb(0 0 0 / 15%);
+  border-right: 1px solid #ddd;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: $font-family-navbar;
@@ -105,6 +109,8 @@ const toggleMenu = () => {
     transform: translateX(250px);
     transition: 0.25s;
     height: 100%;
+    border: 0;
+    border-left: 1px solid #ddd;
 
     &__toggle {
       display: flex;
