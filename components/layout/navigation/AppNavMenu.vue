@@ -1,25 +1,25 @@
 <template>
   <nav class="AppNavMenu">
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'index'}">
-      <IconHome width="24" /> Home
+      <Icon name="ion:home-outline" size="24" /> Home
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'about' }">
-      <IconAbout width="24" /> About
+      <Icon name="ion:person-circle-outline" size="24" /> About
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'blog' }">
-      <IconBlog width="24" /> Blog
+      <Icon name="ion:newspaper-outline" size="24" /> Blog
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'path' }">
-      <IconPath width="24" /> Career Path
+      <Icon name="ion:trail-sign-outline" size="24" /> Career Path
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'tech' }">
-      <IconTech width="24" /> Tech Stack
+      <Icon name="ion:terminal-outline" size="24" /> Tech Stack
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'uses'}">
-      <IconUses width="24" /> Uses
+      <Icon name="ion:laptop-outline" size="24" /> Uses
     </NuxtLink>
     <NuxtLink class="AppNavMenu__link" :to="{ name: 'contact'}">
-      <IconMail width="24" /> Contact
+      <Icon name="ion:mail-outline" size="24" /> Contact
     </NuxtLink>
   </nav>
 </template>
