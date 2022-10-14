@@ -1,29 +1,29 @@
 <template>
-  <aside class="AppNav" :class="isOpen ? 'AppNav--open' : ''">
-    <AppNavToggle :open="isOpen" @toggle="toggleMenu" />
+  <aside :class="computedClass">
+    <AppNavToggle />
     <AppNavMenu />
     <AppNavActions />
   </aside>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import AppNavMenu from '@/components/layout/navigation/AppNavMenu.vue'
-import AppNavToggle from '@/components/layout/navigation/AppNavToggle.vue'
-import AppNavActions from '@/components/layout/navigation/AppNavActions.vue'
+import { useAppNavStore } from '@/stores/appNav'
 
-const isOpen = ref(false)
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value
-}
+const appNavStore = useAppNavStore()
+const css = useCssModule()
+const computedClass = computed(() => {
+  return {
+    [css.wrapper]: true,
+    [css.open]: appNavStore.isOpen
+  }
+})
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
 @import "@/assets/styles/settings/breakpoints";
 @import "@/assets/styles/settings/typo";
 
-.AppNav {
+.wrapper {
   background-color: white;
   padding: 1rem;
   width: 250px;
@@ -43,10 +43,12 @@ const toggleMenu = () => {
     height: 100%;
     border: 0;
     border-left: 1px solid #ddd;
+  }
+}
 
-    &--open {
-      transform: translateX(0);
-    }
+.open {
+  @media (max-width: $breakpoint-laptop) {
+    transform: translateX(0);
   }
 }
 </style>

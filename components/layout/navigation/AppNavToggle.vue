@@ -1,8 +1,8 @@
 <template>
   <button
     class="AppNavToggle"
-    :class="open ? 'AppNavToggle--active' : ''"
-    @click.prevent="$emit('toggle')"
+    :class="computedClass"
+    @click.prevent="appNavStore.toggleMenu"
   >
     <span />
     <span />
@@ -11,10 +11,13 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  open: {
-    type: Boolean,
-    default: false
+import { useAppNavStore } from '@/stores/appNav'
+
+const appNavStore = useAppNavStore()
+
+const computedClass = computed(() => {
+  return {
+    'AppNavToggle--active': appNavStore.isOpen
   }
 })
 </script>

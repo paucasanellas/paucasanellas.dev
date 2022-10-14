@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent, computed } from 'vue'
-
 defineComponent({
   name: 'ObjectContainer'
 })

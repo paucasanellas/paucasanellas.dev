@@ -3,6 +3,7 @@ import '@testing-library/jest-dom'
 import { fireEvent } from '@testing-library/vue'
 import { waitFor } from '@testing-library/dom'
 
+import { createPinia } from 'pinia'
 import { render } from '@/tests/render'
 import { router, routes } from '@/tests/router'
 
@@ -13,7 +14,7 @@ let component
 describe('NavbarDefault Component', () => {
   beforeEach(async () => {
     component = render(AppNavComponent, {
-      plugins: [router]
+      plugins: [router, createPinia()]
     })
     await router.isReady()
   })
@@ -45,6 +46,6 @@ describe('NavbarDefault Component', () => {
     const button = component.getByRole('button', { class: /Toggle/i })
     const aside = component.getByRole('complementary', { class: /AppNav/i })
     await fireEvent.click(button)
-    expect(aside).toHaveClass('AppNav--open')
+    expect(aside).toHaveClass('open')
   })
 })
