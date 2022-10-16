@@ -3,5 +3,6 @@ export interface Route {
   path: string,
   name: string,
   title: string,
-  component: Component,
+  icon?: string,
+  component?: Component,
 }
