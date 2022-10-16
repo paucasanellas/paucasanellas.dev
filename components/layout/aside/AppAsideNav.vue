@@ -1,28 +1,16 @@
 <template>
   <nav class="AppAsideNav">
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'index'}">
-      <AppIcon name="home-outline" size="24" /> Home
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'about' }">
-      <AppIcon name="person-circle-outline" size="24" /> About
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'blog' }">
-      <AppIcon name="newspaper-outline" size="24" /> Blog
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'path' }">
-      <AppIcon name="trail-sign-outline" size="24" /> Career Path
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'tech' }">
-      <AppIcon name="terminal-outline" size="24" /> Tech Stack
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'uses'}">
-      <AppIcon name="laptop-outline" size="24" /> Uses
-    </NuxtLink>
-    <NuxtLink class="AppAsideNav__link" :to="{ name: 'contact'}">
-      <AppIcon name="mail-outline" size="24" /> Contact
+    <NuxtLink v-for="link in appAsideStore.links" :key="link.name" class="AppAsideNav__link" :to="{ name: link.name}">
+      <AppIcon :name="link.icon" size="24" /> {{ link.title }}
     </NuxtLink>
   </nav>
 </template>
+
+<script lang="ts" setup>
+import { useAppAsideStore } from '@/stores/appAside'
+
+const appAsideStore = useAppAsideStore()
+</script>
 
 <style lang="scss">
 @import "@/assets/styles/settings/typo";

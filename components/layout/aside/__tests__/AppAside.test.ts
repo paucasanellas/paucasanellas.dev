@@ -8,9 +8,8 @@ import { render } from '@/tests/render'
 import { router, routes } from '@/tests/router'
 
 import AppAsideComponent from '@/components/layout/aside/AppAside.vue'
-import { useAppAsideStore } from '@/stores/appAside'
 
-let component, store
+let component
 
 describe('AppAside Component', () => {
   beforeEach(async () => {
@@ -18,8 +17,8 @@ describe('AppAside Component', () => {
       plugins: [router, createPinia()]
     })
 
-    store = useAppAsideStore()
-    store.toggleMenu()
+    const button = component.getByRole('button')
+    await fireEvent.click(button)
     await router.isReady()
   })
 
