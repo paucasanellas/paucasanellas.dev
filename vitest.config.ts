@@ -12,10 +12,12 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue'
-      ]
+      ],
+      dts: false
     }),
     Components({
-      dirs: ['components']
+      dirs: ['components'],
+      dts: false
     })
   ],
   test: {

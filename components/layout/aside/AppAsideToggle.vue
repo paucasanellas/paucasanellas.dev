@@ -1,8 +1,8 @@
 <template>
   <button
-    class="AppNavToggle"
+    class="AppAsideToggle"
     :class="computedClass"
-    @click.prevent="appNavStore.toggleMenu"
+    @click.prevent="appAsideStore.toggleMenu"
   >
     <span />
     <span />
@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppNavStore } from '@/stores/appNav'
+import { useAppAsideStore } from '@/stores/appAside'
 
-const appNavStore = useAppNavStore()
+const appAsideStore = useAppAsideStore()
 
 const computedClass = computed(() => {
   return {
-    'AppNavToggle--active': appNavStore.isOpen
+    'AppAsideToggle--active': appAsideStore.isOpen
   }
 })
 </script>
@@ -25,7 +25,7 @@ const computedClass = computed(() => {
 <style lang="scss">
 @import "@/assets/styles/settings/breakpoints";
 
-.AppNavToggle {
+.AppAsideToggle {
   display: flex;
   flex-direction: column;
   width: 4rem;
@@ -34,10 +34,10 @@ const computedClass = computed(() => {
   background-color: transparent;
   gap: 0.56rem;
   cursor: pointer;
-  transform: translateX(-80px);
   position: fixed;
-  bottom: 1.5rem;
-  left: 1rem;
+  bottom: 1.25rem;
+  right: 0.75rem;
+  transition: all 0.25s;
 
   > span {
     display: block;
@@ -50,6 +50,8 @@ const computedClass = computed(() => {
   }
 
   &--active {
+    transform: translateX(-250px);
+
     span:nth-child(1) {
       transform: rotate(-45deg);
     }

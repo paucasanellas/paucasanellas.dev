@@ -1,20 +1,22 @@
 <template>
-  <aside :class="computedClass">
-    <AppNavToggle />
-    <AppNavMenu />
-    <AppNavActions />
-  </aside>
+  <div>
+    <AppAsideToggle />
+    <aside :class="computedClass" :aria-hidden="!appAsideStore.isOpen">
+      <AppAsideNav />
+      <AppAsideActions />
+    </aside>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { useAppNavStore } from '@/stores/appNav'
+import { useAppAsideStore } from '@/stores/appAside'
 
-const appNavStore = useAppNavStore()
+const appAsideStore = useAppAsideStore()
 const css = useCssModule()
 const computedClass = computed(() => {
   return {
     [css.wrapper]: true,
-    [css.open]: appNavStore.isOpen
+    [css.open]: appAsideStore.isOpen
   }
 })
 </script>

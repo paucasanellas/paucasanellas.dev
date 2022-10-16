@@ -1,24 +1,24 @@
 <template>
-  <nav class="AppNavMenu">
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'index'}">
+  <nav class="AppAsideNav">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'index'}">
       <AppIcon name="home-outline" size="24" /> Home
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'about' }">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'about' }">
       <AppIcon name="person-circle-outline" size="24" /> About
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'blog' }">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'blog' }">
       <AppIcon name="newspaper-outline" size="24" /> Blog
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'path' }">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'path' }">
       <AppIcon name="trail-sign-outline" size="24" /> Career Path
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'tech' }">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'tech' }">
       <AppIcon name="terminal-outline" size="24" /> Tech Stack
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'uses'}">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'uses'}">
       <AppIcon name="laptop-outline" size="24" /> Uses
     </NuxtLink>
-    <NuxtLink class="AppNavMenu__link" :to="{ name: 'contact'}">
+    <NuxtLink class="AppAsideNav__link" :to="{ name: 'contact'}">
       <AppIcon name="mail-outline" size="24" /> Contact
     </NuxtLink>
   </nav>
@@ -27,7 +27,7 @@
 <style lang="scss">
 @import "@/assets/styles/settings/typo";
 
-.AppNavMenu {
+.AppAsideNav {
   padding-top: 2rem;
 
   &__link {

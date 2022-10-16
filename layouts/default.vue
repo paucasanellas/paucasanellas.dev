@@ -1,7 +1,7 @@
 <template>
   <div class="LayoutDefault">
     <AppContainer>
-      <AppNav />
+      <AppAside />
       <slot />
     </AppContainer>
   </div>

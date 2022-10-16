@@ -7,15 +7,19 @@ import { createPinia } from 'pinia'
 import { render } from '@/tests/render'
 import { router, routes } from '@/tests/router'
 
-import AppNavComponent from '@/components/layout/navigation/AppNav.vue'
+import AppAsideComponent from '@/components/layout/aside/AppAside.vue'
+import { useAppAsideStore } from '@/stores/appAside'
 
-let component
+let component, store
 
 describe('NavbarDefault Component', () => {
   beforeEach(async () => {
-    component = render(AppNavComponent, {
+    component = render(AppAsideComponent, {
       plugins: [router, createPinia()]
     })
+
+    store = useAppAsideStore()
+    store.toggleMenu()
     await router.isReady()
   })
 
@@ -32,20 +36,18 @@ describe('NavbarDefault Component', () => {
 
   it('should navigate between all links', async () => {
     for (const route of routes) {
-      await fireEvent.click(component.getByText(route.title))
+      const link = component.getByRole('link', { name: route.title })
+      await fireEvent.click(link)
 
       await waitFor(() => {
-        const link = component.getByRole('link', { name: route.title })
-        expect(link).toHaveAttribute('aria-current', 'page')
         expect(link).toHaveAttribute('href', route.path)
+        expect(link).toHaveAttribute('aria-current', 'page')
       })
     }
   })
 
-  it('should be open when click toggle', async () => {
-    const button = component.getByRole('button', { class: /Toggle/i })
-    const aside = component.getByRole('complementary', { class: /AppNav/i })
-    await fireEvent.click(button)
-    expect(aside).toHaveClass('open')
+  it('should be open when click toggle', () => {
+    const aside = component.getByRole('complementary', { class: /AppAside/i })
+    expect(aside).toHaveAttribute('aria-hidden', 'false')
   })
 })
