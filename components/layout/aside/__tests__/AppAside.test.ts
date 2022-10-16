@@ -12,7 +12,7 @@ import { useAppAsideStore } from '@/stores/appAside'
 
 let component, store
 
-describe('NavbarDefault Component', () => {
+describe('AppAside Component', () => {
   beforeEach(async () => {
     component = render(AppAsideComponent, {
       plugins: [router, createPinia()]

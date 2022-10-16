@@ -33,7 +33,7 @@ const computedClass = computed(() => {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: $font-family-navbar;
+  font-family: $font-family-aside;
   z-index: 1;
 
   @media (max-width: $breakpoint-laptop) {

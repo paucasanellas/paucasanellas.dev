@@ -36,8 +36,8 @@
     gap: 0.75rem;
     padding: 0.75rem 1rem;
     transition: 0.15s color;
-    font-weight: $font-weight-navbar;
-    font-size: $font-size-navbar;
+    font-weight: $font-weight-aside;
+    font-size: $font-size-aside;
 
     .icon {
       color: #ccc;
