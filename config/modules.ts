@@ -8,7 +8,6 @@ const googleFonts = {
   download: false,
   prefetch: true,
   preconnect: true,
-  preload: true,
   families
 }
 
