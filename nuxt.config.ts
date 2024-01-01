@@ -5,8 +5,20 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   modules: [
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en-EN.json'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'en'
+  },
   tailwindcss: {
     viewer: false
   },
