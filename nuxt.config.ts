@@ -9,5 +9,8 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     viewer: false
+  },
+  ui: {
+    global: true
   }
 })
