@@ -1,0 +1,15 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+    //"plugin:tailwindcss/recommended"
+  ],
+  "ignorePatterns": ["node_modules"],
+  "rules": {
+    "tailwindcss/no-custom-classname": "off"
+  }
+}
