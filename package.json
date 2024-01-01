@@ -7,7 +7,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js .",
+    "lint:fix": "yarn lint:eslint --fix",
+    "typecheck": "nuxi typecheck"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",

@@ -5,8 +5,8 @@
       "node": true
   },
   "extends": [
-    "@nuxtjs/eslint-config-typescript",
-    "plugin:tailwindcss/recommended"
+    "@nuxtjs/eslint-config-typescript"
+    //"plugin:tailwindcss/recommended"
   ],
   "ignorePatterns": ["node_modules"],
   "rules": {
