@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky install",
-    "lint": "eslint --ext .ts,.js .",
+    "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "typecheck": "nuxi typecheck"
   },
