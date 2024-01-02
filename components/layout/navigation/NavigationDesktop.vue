@@ -1,8 +1,8 @@
 <template>
-  <header class="sticky top-0 flex w-full bg-white">
-    <div>
+  <header class="sticky top-0 flex w-full bg-white font-display">
+    <section>
       <h1>{{ appName }}</h1>
-    </div>
+    </section>
   </header>
 </template>
 

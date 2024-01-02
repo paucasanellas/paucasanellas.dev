@@ -6,8 +6,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/ui',
+    '@nuxtjs/google-fonts',
     '@nuxtjs/i18n'
   ],
+  googleFonts: {
+    families: {
+      'Noto+Sans+JP': [300, 400, 700]
+    }
+  },
   i18n: {
     locales: [
       {
