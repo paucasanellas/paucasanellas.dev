@@ -9,6 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky install",
+    "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "typecheck": "nuxi typecheck"
@@ -16,13 +17,17 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@nuxt/test-utils": "^3.9.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "^8.0.0",
+    "@testing-library/vue": "^8.0.1",
     "eslint": "^8.56.0",
     "eslint-plugin-tailwindcss": "^3.13.1",
+    "happy-dom": "^12.10.3",
     "husky": "^8.0.3",
     "nuxt": "^3.9.0",
     "typescript": "^5.3.3",
+    "vitest": "^1.1.1",
     "vue": "^3.4.3",
     "vue-router": "^4.2.5"
   },
