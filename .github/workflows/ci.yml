@@ -36,6 +36,6 @@ jobs:
       - name: Run typecheck 👀
         run: yarn typecheck
       - name: Run tests 👀
-        run: yarn tests
+        run: yarn test
       - name: Run linter 👀
         run: yarn lint
