@@ -1,0 +1,41 @@
+name: CI Pipeline
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+jobs:
+  avoid_reduncy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ github.token }}
+  ci:
+    needs: [avoid_reduncy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          check-latest: true
+      - name: Get yarn cache directory path 🛠
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies 👨🏻‍💻
+        run: yarn
+      - name: Run typecheck 👀
+        run: yarn typecheck
+      - name: Run tests 👀
+        run: yarn test
+      - name: Run linter 👀
+        run: yarn lint
