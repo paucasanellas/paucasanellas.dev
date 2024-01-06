@@ -1,10 +1,10 @@
 <template>
   <header class="sticky top-0 bg-white font-display">
-    <UContainer>
-      <!-- Logo -->
+    <AppContainer class="flex justify-between">
+      <AppLogo />
       <NavigationDesktop :links="links" />
-      <!-- Actions -->
-    </UContainer>
+      <AppActions />
+    </AppContainer>
   </header>
 </template>
 

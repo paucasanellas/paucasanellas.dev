@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="hidden md:flex">
     Navigation Desktop
   </nav>
 </template>
