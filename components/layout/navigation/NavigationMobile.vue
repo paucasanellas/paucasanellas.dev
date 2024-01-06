@@ -1,6 +1,6 @@
 <template>
-  <nav class="fixed bottom-0 flex w-full bg-white md:hidden">
-    NavbarMobile
+  <nav>
+    Navigation Mobile
   </nav>
 </template>
 

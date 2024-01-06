@@ -1,9 +1,7 @@
 <template>
-  <header class="sticky top-0 flex w-full bg-white font-display">
-    <section>
-      <h1>{{ appName }}</h1>
-    </section>
-  </header>
+  <nav>
+    Navigation Desktop
+  </nav>
 </template>
 
 <script lang="ts" setup>
@@ -15,6 +13,4 @@ defineProps({
     required: true
   }
 })
-
-const appName = useAppConfig().app.name
 </script>

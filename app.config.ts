@@ -2,7 +2,10 @@ export default defineAppConfig({
   app: {
     name: 'Pau Casanellas',
     navigation: {
-      links: [
+      desktop: [
+        { title: 'navigation.home', name: 'index', icon: undefined }
+      ],
+      mobile: [
         { title: 'navigation.home', name: 'index', icon: undefined }
       ]
     }

@@ -1,11 +1,7 @@
 <template>
   <div>
-    <NavigationDesktop :links="links" />
+    <AppHeader />
     <slot />
-    <NavigationMobile :links="links" />
+    <AppFooter />
   </div>
 </template>
-
-<script lang="ts" setup>
-const links = useAppConfig().app.navigation.links
-</script>
