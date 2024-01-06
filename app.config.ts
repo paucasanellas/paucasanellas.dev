@@ -1,13 +1,11 @@
+import { desktopNavigation, mobileNavigation } from '@/config/navigation'
+
 export default defineAppConfig({
   app: {
     name: 'Pau Casanellas',
     navigation: {
-      desktop: [
-        { title: 'navigation.home', name: 'index', icon: undefined }
-      ],
-      mobile: [
-        { title: 'navigation.home', name: 'index', icon: undefined }
-      ]
+      desktop: desktopNavigation,
+      mobile: mobileNavigation
     }
   },
   ui: {

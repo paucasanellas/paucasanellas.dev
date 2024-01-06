@@ -1,16 +1,9 @@
 <template>
   <nav class="hidden md:flex">
-    Navigation Desktop
+    {{ links }}
   </nav>
 </template>
 
 <script lang="ts" setup>
-import type { NavigationLink } from '~/types'
-
-defineProps({
-  links: {
-    type: Array as PropType<NavigationLink[]>,
-    required: true
-  }
-})
+const links = useAppConfig().app.navigation.desktop
 </script>
