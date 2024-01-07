@@ -3,6 +3,7 @@
     <NavigationLink
       v-for="link in links"
       :key="link.name"
+      class="px-4"
       :link="link"
     />
   </nav>

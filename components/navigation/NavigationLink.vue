@@ -1,5 +1,6 @@
 <template>
-  <NuxtLink :key="link.name" :to="localePath({name: link.name})">
+  <NuxtLink :key="link.name" :to="localePath({name: link.name})" class="grid place-items-center">
+    <UIcon v-if="link.icon" :name="link.icon" class="text-lg" />
     {{ $t(link.title) }}
   </NuxtLink>
 </template>

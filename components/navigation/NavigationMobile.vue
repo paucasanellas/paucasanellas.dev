@@ -1,9 +1,9 @@
 <template>
-  <nav class="flex">
+  <nav class="flex justify-around">
     <NavigationLink
       v-for="link in links"
       :key="link.name"
-      class="p-4"
+      class="py-4 text-xs"
       :link="link"
     />
   </nav>

@@ -1,5 +1,8 @@
 {
   "navigation": {
-    "home": "Home"
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "articles": "Articles"
   }
 }
