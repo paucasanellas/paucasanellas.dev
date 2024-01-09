@@ -7,11 +7,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxt/content'
   ],
   googleFonts: {
     families: {
-      'Noto+Sans+JP': [300, 400, 700]
+      Montserrat: [300, 400, 700]
     }
   },
   i18n: {

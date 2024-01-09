@@ -4,7 +4,7 @@ export default <Partial<Config>> {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Noto Sans JP', 'sans-serif']
+        display: ['Montserrat', 'sans-serif']
       }
     }
   }
