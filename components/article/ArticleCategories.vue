@@ -1,6 +1,6 @@
 <template>
   <div class="inline-flex gap-2">
-    <ArticleCategory v-for="category in categories" :key="category" :color="categoriesData[category].color">
+    <ArticleCategory v-for="category in categories" :key="category" :color="categoriesData[category]?.color || 'primary'">
       {{ $t('categories.' + category) }}
     </ArticleCategory>
   </div>
