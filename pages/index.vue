@@ -1,7 +1,15 @@
 <template>
   <main>
     <AppContainer>
-      <h1>Home</h1>
+      <HomeLastArticle
+        v-if="lastArticle"
+        :article="lastArticle"
+      />
     </AppContainer>
   </main>
 </template>
+
+<script setup lang="ts">
+import type { Article } from '@/types'
+const [lastArticle] = await queryContent<Article>('articles').limit(1).find()
+</script>

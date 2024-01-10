@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "articles": "Artículos"
+  },
+  "home": {
+    "lastArticle": "Último artículo"
+  }
+}

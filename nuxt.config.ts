@@ -18,13 +18,17 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       {
+        code: 'es',
+        file: 'es-ES.json'
+      },
+      {
         code: 'en',
         file: 'en-EN.json'
       }
     ],
     lazy: true,
     langDir: 'lang',
-    defaultLocale: 'en'
+    defaultLocale: 'es'
   },
   tailwindcss: {
     viewer: false

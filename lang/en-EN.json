@@ -4,5 +4,8 @@
     "about": "About",
     "contact": "Contact",
     "articles": "Articles"
+  },
+  "home": {
+    "lastArticle": "Last article"
   }
 }
