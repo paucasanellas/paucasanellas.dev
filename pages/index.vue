@@ -11,5 +11,7 @@
 
 <script setup lang="ts">
 import type { Article } from '@/types'
-const [lastArticle] = await queryContent<Article>('articles').limit(1).find()
+const { locale } = useI18n()
+
+const [lastArticle] = await queryContent<Article>('articles', locale.value).limit(1).find()
 </script>
