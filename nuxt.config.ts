@@ -8,8 +8,12 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
-    '@nuxt/content'
+    '@nuxt/content',
+    'dayjs-nuxt'
   ],
+  dayjs: {
+    locales: ['es', 'en']
+  },
   googleFonts: {
     families: {
       Montserrat: [300, 400, 700]
