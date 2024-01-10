@@ -6,7 +6,14 @@
     "articles": "Articles"
   },
   "home": {
-    "lastArticle": "Last article",
+    "lastArticle": "Last article"
+  },
+  "categories": {
+    "nuxt": "Nuxt",
     "business": "Business"
+  },
+  "article": {
+    "readMore": "Read more",
+    "readTime": "{time} minutes long"
   }
 }
