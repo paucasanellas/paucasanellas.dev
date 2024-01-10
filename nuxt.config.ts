@@ -24,11 +24,13 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'es',
-        file: 'es-ES.json'
+        file: 'es-ES.json',
+        name: 'Español'
       },
       {
         code: 'en',
-        file: 'en-EN.json'
+        file: 'en-EN.json',
+        name: 'English'
       }
     ],
     lazy: true,
