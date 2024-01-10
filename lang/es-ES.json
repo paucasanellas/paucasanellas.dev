@@ -7,5 +7,13 @@
   },
   "home": {
     "lastArticle": "Último artículo"
+  },
+  "categories": {
+    "nuxt": "Nuxt",
+    "business": "Empresa"
+  },
+  "article": {
+    "readMore": "Leer más",
+    "readTime": "{time} minutos de lectura"
   }
 }

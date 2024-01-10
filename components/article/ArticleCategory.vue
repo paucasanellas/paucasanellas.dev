@@ -1,5 +1,5 @@
 <template>
-  <UBadge color="red" variant="solid" class="mr-2">
+  <UBadge variant="solid">
     <slot />
   </UBadge>
 </template>

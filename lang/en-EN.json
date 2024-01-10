@@ -6,6 +6,7 @@
     "articles": "Articles"
   },
   "home": {
-    "lastArticle": "Last article"
+    "lastArticle": "Last article",
+    "business": "Business"
   }
 }

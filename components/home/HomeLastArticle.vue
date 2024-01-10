@@ -1,42 +1,46 @@
 <template>
-  <section class="mt-4 grid items-center gap-8 md:grid-cols-12">
-    <div class="md:col-span-5">
-      <NuxtLinkLocale :to="{ name: 'articles-slug', params: { slug: article.slug }}">
+  <section class="mt-4 grid gap-2 md:grid-cols-12 md:gap-8">
+    <figure class="md:col-span-5">
+      <NuxtLink :to="to">
         <img :src="article.cover" :alt="article.title">
-      </NuxtLinkLocale>
-    </div>
-    <div class="md:col-span-7">
+      </NuxtLink>
+    </figure>
+    <div class="grid items-center gap-4 md:col-span-7">
+      <p class="font-light uppercase">
+        {{ $t('home.lastArticle') }} {{ useDate(article.createdAt).fromNow() }}
+      </p>
       <div class="grid gap-4">
-        <p class="font-display uppercase">
-          {{ $t('home.lastArticle') }}
-        </p>
-        <div>
-          <h2 class="font-display text-xl font-bold uppercase hover:underline md:text-3xl">
-            <NuxtLinkLocale :to="{ name: 'articles-slug', params: { slug: article.slug }}">
-              {{ article.title }}
-            </NuxtLinkLocale>
-          </h2>
-          <p class="mt-2 font-light md:text-lg">
-            {{ article.description }}
-          </p>
+        <h2 class="font-display text-xl font-bold uppercase hover:underline md:text-3xl">
+          <NuxtLink :to="to">
+            {{ article.title }}
+          </NuxtLink>
+        </h2>
+        <div class="flex items-center gap-4 text-sm">
+          <ArticleCategories
+            v-if="article.categories"
+            :categories="article.categories"
+          />
+          <span>{{ $t('article.readTime', { time: article.readTime }) }}</span>
         </div>
-        <p class="font-display text-sm">
-          <ArticleCategory v-for="category in article.categories" :key="category">
-            {{ category }}
-          </ArticleCategory>
-          <span> · {{ article.readTime }} minutes reading</span>
+        <p class="font-light md:text-lg">
+          {{ article.description }}
         </p>
       </div>
+      <ArticleReadMore :to="to" class="ml-auto" />
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import type { Article } from '@/types'
-defineProps({
+const localePath = useLocalePath()
+
+const props = defineProps({
   article: {
     type: Object as PropType<Article>,
     required: true
   }
 })
+
+const to = localePath({ name: 'articles-slug', params: { slug: props.article.slug } })
 </script>
