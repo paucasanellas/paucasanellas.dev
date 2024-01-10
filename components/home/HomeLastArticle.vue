@@ -2,7 +2,13 @@
   <section class="mt-4 grid gap-2 md:grid-cols-12 md:gap-8">
     <figure class="md:col-span-5">
       <NuxtLink :to="to">
-        <img :src="article.cover" :alt="article.title">
+        <NuxtImg
+          :src="article.cover"
+          :alt="article.title"
+          height="500"
+          width="500"
+          :modifiers="{w: 500, h: 500}"
+        />
       </NuxtLink>
     </figure>
     <div class="grid items-center gap-4 md:col-span-7">

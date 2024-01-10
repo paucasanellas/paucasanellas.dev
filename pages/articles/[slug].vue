@@ -1,7 +1,9 @@
 <template>
-  <div>
-    {{ params.slug }}
-  </div>
+  <main>
+    <AppContainer>
+      {{ params.slug }}
+    </AppContainer>
+  </main>
 </template>
 
 <script lang="ts" setup>

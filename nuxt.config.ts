@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxt/content',
-    'dayjs-nuxt'
+    'dayjs-nuxt',
+    '@nuxt/image'
   ],
   dayjs: {
     locales: ['es', 'en']
