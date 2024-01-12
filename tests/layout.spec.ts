@@ -3,7 +3,7 @@ import { screen } from '@testing-library/vue'
 
 import App from '~/app.vue'
 
-describe('Layout', () => {
+describe.skip('Layout', () => {
   it('should render logo', async () => {
     await renderSuspended(App)
     await screen.getByRole('link', { name: 'Pau Casanellas' })

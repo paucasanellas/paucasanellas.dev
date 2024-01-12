@@ -7,6 +7,7 @@
           :alt="article.title"
           height="500"
           width="500"
+          class="rounded-lg"
           :modifiers="{w: 500, h: 500}"
         />
       </NuxtLink>
@@ -26,7 +27,9 @@
             v-if="article.categories"
             :categories="article.categories"
           />
-          <span>{{ $t('article.readTime', { time: article.readTime }) }}</span>
+          <span v-if="article.readTime" class="font-light">
+            {{ $t('article.readTime', { time: article.readTime }) }}
+          </span>
         </div>
         <p class="font-light md:text-lg">
           {{ article.description }}
