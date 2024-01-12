@@ -1,0 +1,8 @@
+{
+  "business": {
+    "color": "blue"
+  },
+  "nuxt": {
+    "color": "green"
+  }
+}

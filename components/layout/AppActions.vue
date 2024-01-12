@@ -1,6 +1,7 @@
 <template>
-  <div class="flex items-center py-4">
-    <UIcon name="i-heroicons-magnifying-glass" class="text-2xl" />
+  <div class="flex items-center gap-2 py-4">
+    <LangSwitcher />
+    <UIcon name="i-heroicons-magnifying-glass" class="text-xl" />
   </div>
 </template>
 
