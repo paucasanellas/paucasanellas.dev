@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/ui',
+    '@nuxt/test-utils/module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxt/content',
