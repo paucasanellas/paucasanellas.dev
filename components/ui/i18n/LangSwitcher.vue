@@ -11,12 +11,12 @@
 
 <script setup>
 const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
+const localeRoute = useLocaleRoute()
 
 const currentLocale = computed({
   get: () => locales.value.find(language => language.code === locale.value),
   set: (language) => {
-    navigateTo(switchLocalePath(language.code))
+    navigateTo(localeRoute('index', language.code))
   }
 })
 </script>

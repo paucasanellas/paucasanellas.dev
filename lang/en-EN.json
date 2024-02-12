@@ -6,6 +6,7 @@
     "articles": "Articles"
   },
   "home": {
+    "title": "Home",
     "lastArticle": "Last article"
   },
   "categories": {
@@ -15,5 +16,9 @@
   "article": {
     "readMore": "Read more",
     "readTime": "{time} minutes long"
+  },
+  "errors": {
+    "default":"Ops, unexpected error",
+    "404": "Not found"
   }
 }

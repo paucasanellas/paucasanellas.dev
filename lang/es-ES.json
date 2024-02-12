@@ -6,6 +6,7 @@
     "articles": "Artículos"
   },
   "home": {
+    "title": "Página principal",
     "lastArticle": "Último artículo"
   },
   "categories": {
@@ -15,5 +16,9 @@
   "article": {
     "readMore": "Leer más",
     "readTime": "{time} minutos de lectura"
+  },
+  "errors": {
+    "default":"Ops, error inesperado",
+    "404": "No existe"
   }
 }

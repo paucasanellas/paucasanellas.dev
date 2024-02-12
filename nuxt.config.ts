@@ -13,6 +13,9 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/image'
   ],
+  content: {
+    locales: ['es', 'en']
+  },
   dayjs: {
     locales: ['es', 'en']
   },
