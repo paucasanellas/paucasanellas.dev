@@ -1,0 +1,10 @@
+{
+  "empresa": {
+    "name": "Empresa",
+    "color": "blue"
+  },
+  "nuxt": {
+    "name": "Nuxt",
+    "color": "green"
+  }
+}

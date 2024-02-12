@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
   components: [
     { path: '~/components', pathPrefix: false }
   ],
@@ -13,6 +17,9 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/image'
   ],
+  content: {
+    locales: ['es', 'en']
+  },
   dayjs: {
     locales: ['es', 'en']
   },

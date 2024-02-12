@@ -6,14 +6,16 @@
     "articles": "Articles"
   },
   "home": {
+    "title": "Home",
     "lastArticle": "Last article"
   },
-  "categories": {
-    "nuxt": "Nuxt",
-    "business": "Business"
-  },
   "article": {
+    "toc": "Table of contents",
     "readMore": "Read more",
     "readTime": "{time} minutes long"
+  },
+  "errors": {
+    "default":"Ops, unexpected error",
+    "404": "Not found"
   }
 }

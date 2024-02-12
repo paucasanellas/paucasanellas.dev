@@ -6,14 +6,16 @@
     "articles": "Artículos"
   },
   "home": {
+    "title": "Página principal",
     "lastArticle": "Último artículo"
   },
-  "categories": {
-    "nuxt": "Nuxt",
-    "business": "Empresa"
-  },
   "article": {
+    "toc": "Tabla de contenidos",
     "readMore": "Leer más",
     "readTime": "{time} minutos de lectura"
+  },
+  "errors": {
+    "default":"Ops, error inesperado",
+    "404": "No existe"
   }
 }
