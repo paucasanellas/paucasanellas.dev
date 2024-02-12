@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div class="min-h-dvh dark:bg-slate-800">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -43,5 +45,20 @@ watch(locale, async () => {
 .layout-enter-from,
 .layout-leave-to {
   opacity: 0;
+}
+
+.dark h1, .dark h2, .glow {
+    color: #ffffff;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #f36cb0, 0 0 10px #ff4da6;
+  }
+
+  to {
+    text-shadow: 0 0 10px #ff4da6, 0 0 15px #ff4da6;
+  }
 }
 </style>
