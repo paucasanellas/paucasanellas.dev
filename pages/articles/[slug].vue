@@ -34,14 +34,12 @@ import type { Article } from '@/types'
 const { slug } = useRoute().params
 const { locale } = useI18n()
 
-const { data: article } = await useAsyncData(
-  () => queryContent<Article>(
-    'articles',
+const article = await queryContent<Article>(
+  'articles',
   slug as string
-  ).locale(locale.value).findOne()
-)
+).locale(locale.value).findOne()
 
-if (!article.value) {
+if (!article) {
   throw createError({
     fatal: true,
     statusCode: 404
@@ -53,11 +51,11 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: article.value.title,
-  description: article.value.description,
-  ogTitle: article.value.title,
-  ogDescription: article.value.description,
-  ogImage: article.value.cover
+  title: article.title,
+  description: article.description,
+  ogTitle: article.title,
+  ogDescription: article.description,
+  ogImage: article.cover
 })
 
 defineI18nRoute({

@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import type { ArticleCategory, ArticleCategoryOption } from '@/types'
 
-const categoriesData = useState<ArticleCategoryOption>('categories')
+const { value: categoriesData } = useState<ArticleCategoryOption>('categories')
 
 defineProps({
   categories: {

@@ -14,9 +14,8 @@
   </NuxtLayout>
 </template>
 
-<script setup lang="ts">
-import type { NuxtError } from '#app'
-const error = useError() as Ref<NuxtError>
+<script setup>
+const error = useError()
 
 const { t, te } = useI18n()
 
