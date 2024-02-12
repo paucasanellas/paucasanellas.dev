@@ -13,7 +13,7 @@
         :alt="article.title"
         height="700"
         width="700"
-        class="rounded-lg drop-shadow-xl"
+        class="w-full rounded-lg drop-shadow-xl"
         :modifiers="{ w: 700, h: 700 }"
       />
     </header>

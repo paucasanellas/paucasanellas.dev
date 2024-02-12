@@ -12,7 +12,11 @@
 <script setup lang="ts">
 import type { Article } from '@/types'
 const { locale, t } = useI18n()
-const [lastArticle] = await queryContent<Article>('articles').locale(locale.value).limit(1).find()
+const [lastArticle] = await queryContent<Article>('articles')
+  .locale(locale.value)
+  .sort({ createdAt: -1 })
+  .limit(1)
+  .find()
 
 useSeoMeta({
   title: t('home.title')
