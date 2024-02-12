@@ -14,6 +14,7 @@
     "business": "Empresa"
   },
   "article": {
+    "toc": "Tabla de contenidos",
     "readMore": "Leer más",
     "readTime": "{time} minutos de lectura"
   },

@@ -11,13 +11,18 @@
       <NuxtImg
         :src="article.cover"
         :alt="article.title"
-        height="500"
-        width="500"
-        class="rounded-lg"
-        :modifiers="{ w: 500, h: 500 }"
+        height="700"
+        width="700"
+        class="rounded-lg drop-shadow-xl"
+        :modifiers="{ w: 700, h: 700 }"
       />
     </header>
-    <div class="prose mt-4">
+    <ArticleToc
+      v-if="article.body?.toc?.links?.length"
+      class="mt-8"
+      :links="article.body.toc.links"
+    />
+    <div class="prose mt-8">
       <ContentRendererMarkdown :value="article" />
     </div>
   </main>
@@ -29,17 +34,17 @@ import type { Article } from '@/types'
 const { slug } = useRoute().params
 const { locale } = useI18n()
 
-const { data: article } = await useAsyncData(() => queryContent<Article>(
-  'articles',
+const { data: article } = await useAsyncData(
+  () => queryContent<Article>(
+    'articles',
   slug as string
-).locale(locale.value).findOne()
+  ).locale(locale.value).findOne()
 )
 
 if (!article.value) {
   throw createError({
     fatal: true,
-    statusCode: 404,
-    statusMessage: 'adsad'
+    statusCode: 404
   })
 }
 
