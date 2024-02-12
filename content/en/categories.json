@@ -1,8 +1,10 @@
 {
   "business": {
+    "name": "Business",
     "color": "blue"
   },
   "nuxt": {
+    "name": "Nuxt",
     "color": "green"
   }
 }

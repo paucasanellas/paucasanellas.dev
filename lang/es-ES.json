@@ -9,10 +9,6 @@
     "title": "Página principal",
     "lastArticle": "Último artículo"
   },
-  "categories": {
-    "nuxt": "Nuxt",
-    "business": "Empresa"
-  },
   "article": {
     "toc": "Tabla de contenidos",
     "readMore": "Leer más",

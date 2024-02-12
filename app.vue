@@ -5,10 +5,25 @@
 </template>
 
 <script setup lang="ts">
-const appName = useAppConfig().app.name
+const { locale } = useI18n()
+
 useSeoMeta({
-  titleTemplate: `%s - ${appName}`
+  titleTemplate: `%s - ${useAppConfig().app.name}`
 })
+
+const fetchCategories = async () => {
+  const categories = useState('categories')
+  categories.value = await queryContent('categories').locale(locale.value).findOne()
+}
+
+await callOnce(async () => {
+  await fetchCategories()
+})
+
+watch(locale, async () => {
+  await fetchCategories()
+})
+
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-4 grid gap-2 md:grid-cols-12 md:gap-8">
+  <section class="grid gap-2 md:grid-cols-12 md:gap-8">
     <figure class="md:col-span-5">
       <NuxtLink :to="to">
         <NuxtImg

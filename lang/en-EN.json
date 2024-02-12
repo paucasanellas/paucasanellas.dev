@@ -9,10 +9,6 @@
     "title": "Home",
     "lastArticle": "Last article"
   },
-  "categories": {
-    "nuxt": "Nuxt",
-    "business": "Business"
-  },
   "article": {
     "toc": "Table of contents",
     "readMore": "Read more",

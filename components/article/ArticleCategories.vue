@@ -1,15 +1,20 @@
 <template>
   <div class="inline-flex gap-2">
-    <ArticleCategory v-for="category in categories" :key="category" :color="categoriesData[category]?.color || 'primary'">
-      {{ $t('categories.' + category) }}
-    </ArticleCategory>
+    <template v-for="category in categories" :key="category">
+      <ArticleCategory
+        v-if="categoriesData[category]"
+        :color="categoriesData[category].color || 'primary'"
+      >
+        {{ categoriesData[category].name || category }}
+      </ArticleCategory>
+    </template>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { ArticleCategory } from '@/types'
+import type { ArticleCategory, ArticleCategoryOption } from '@/types'
 
-const categoriesData = await queryContent('categories').findOne()
+const categoriesData = useState<ArticleCategoryOption>('categories')
 
 defineProps({
   categories: {
