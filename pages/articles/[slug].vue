@@ -22,7 +22,7 @@
       class="mt-8"
       :links="article.body.toc.links"
     />
-    <div class="prose mt-8">
+    <div class="prose mt-8 dark:prose-invert">
       <ContentRendererMarkdown :value="article" />
     </div>
   </main>

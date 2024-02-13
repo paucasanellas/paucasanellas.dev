@@ -1,5 +1,5 @@
 <template>
-  <div class="prose rounded-lg bg-gray-100 p-4 shadow">
+  <div class="prose rounded-lg bg-gray-100 p-4 shadow dark:prose-invert dark:bg-slate-900">
     <h4>{{ $t('article.toc') }}</h4>
     <ul>
       <li v-for="link in links" :key="link.id">

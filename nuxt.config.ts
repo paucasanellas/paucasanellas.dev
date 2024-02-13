@@ -4,6 +4,10 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light'
+  },
   components: [
     { path: '~/components', pathPrefix: false }
   ],

@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout v-if="error" name="error">
-    <AppContainer class="prose">
+    <AppContainer class="prose dark:prose-invert">
       <h1>{{ error.statusCode }}</h1>
       <h2>
         <template v-if="$te('errors.' + error.statusCode)">

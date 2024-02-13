@@ -1,5 +1,5 @@
 <template>
-  <USelectMenu v-model="currentLocale" :options="locales" variant="none" :ui-menu="{width: 'w-max'}">
+  <USelectMenu v-model="currentLocale" :options="locales" variant="none" :ui-menu="{width: 'w-max'}" class="-mr-2">
     <template #label>
       <UIcon name="i-heroicons-language" class="text-xl" />
     </template>
