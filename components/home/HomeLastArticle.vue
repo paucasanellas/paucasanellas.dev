@@ -17,7 +17,7 @@
         {{ $t('home.lastArticle') }} {{ useDate(article.createdAt).fromNow() }}
       </p>
       <div class="grid gap-4">
-        <h2 class="font-display text-xl font-bold uppercase hover:underline md:text-3xl">
+        <h2 class="font-display text-xl font-bold uppercase md:text-3xl">
           <NuxtLink :to="to">
             {{ article.title }}
           </NuxtLink>
